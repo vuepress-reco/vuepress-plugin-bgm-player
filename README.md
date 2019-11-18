@@ -1,2 +1,62 @@
-# vuepress-plugin-bgm
-Bgm player plugin for vuepress-theme-reco or other vuepress theme
+# @vuepress-reco/vuepress-plugin-bgm
+
+![demo.png](./images/demo.png)
+
+## Details
+
+> Bgm player for vuepress-theme-reco or other vuepress theme.  
+> Vuepress 音乐播放器插件
+
+|使用位置|值|
+|-|-|
+|plugin name|@vuepress-reco/vuepress-plugin-bgm|
+|component name|BgMusic（自动出现在页面中，无需添加额外代码）|
+
+## Options
+
+> 以下为插件注入时的参数。
+
+### Attributes
+
+|参数|说明|类型|默认值|可选值|
+|-|-|-|-|-|
+|audios|播放列表|Array|无|-|
+|position|播放器位置|Object|{ left: '10px', bottom: '10px', 'z-index': '999999'}|-|
+|mini|是否默认为迷你模式|Boolean|false|true/false|
+
+
+### audios示例
+
+- audios为播放列表的对象数组
+- 示例
+  ```
+  audios: [
+    // 本地文件示例
+    {
+      name: '장가갈 수 있을까',
+      artist: '咖啡少年',
+      url: '/bgm/1.mp3',
+      cover: '/bgm/1.jpg'
+    },
+    // 网络文件示例
+    {
+      name: '강남역 4번 출구',
+      artist: 'Plastic / Fallin` Dild',
+      url: 'https://assets.smallsunnyfox.com/music/2.mp3',
+      cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
+    },
+    {
+      name: '用胳膊当枕头',
+      artist: '최낙타',
+      url: 'https://assets.smallsunnyfox.com/music/3.mp3',
+      cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
+    }
+  ]  
+  ```
+
+## About
+
+- **兼容性**：vuepress-plugin-bgm是使用HTML5的Audio开发，故兼容性与Audio的兼容性相关
+- **开发计划**
+  - 自动播放
+  - 移动端适配问题修复
