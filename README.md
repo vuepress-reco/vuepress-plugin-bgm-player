@@ -1,4 +1,4 @@
-# @vuepress-reco/vuepress-plugin-bgm
+# @vuepress-reco/vuepress-plugin-bgm-player
 
 ![demo.png](./images/demo.png)
 
@@ -9,7 +9,7 @@
 
 |使用位置|值|
 |-|-|
-|plugin name|@vuepress-reco/vuepress-plugin-bgm|
+|plugin name|@vuepress-reco/vuepress-plugin-bgm-player|
 |component name|BgMusic（自动出现在页面中，无需添加额外代码）|
 
 ## Options
@@ -56,7 +56,7 @@
 
 ## About
 
-- **兼容性**：vuepress-plugin-bgm是使用HTML5的Audio开发，故兼容性与Audio的兼容性相关
+- **兼容性**：vuepress-plugin-bgm-player是使用HTML5的Audio开发，故兼容性与Audio的兼容性相关
 - **开发计划**
   - 自动播放
   - 移动端适配问题修复

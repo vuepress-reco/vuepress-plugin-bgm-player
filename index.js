@@ -14,7 +14,7 @@ module.exports = (options, context) => ({
       AUTOPLAY: autoplay || true // 是否开启自动播放
     }
   },
-  name: '@vuepress-reco/vuepress-plugin-bgm',
+  name: '@vuepress-reco/vuepress-plugin-bgm-player',
   enhanceAppFiles: resolve(__dirname, './bin/enhanceAppFile.js'),
   globalUIComponents: 'BgMusic'
 })
