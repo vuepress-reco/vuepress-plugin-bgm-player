@@ -79,7 +79,6 @@ export default {
       audio: AUDIOS,
       autoplay: AUTOPLAY,
       isMini: MINI,
-      rotateVal: 0,
       firstLoad: true,
       isMute: false,
       isFault: false
@@ -181,6 +180,8 @@ export default {
     progressJump (e) {
       const total_time = this.$refs.bgm.duration
       const percent = e.offsetX / 150
+      // 歌曲未加载完成时点击进度条的错误处理
+      if (isNaN(total_time)) return
       this.$refs.bgm.currentTime = percent * total_time
     },
     // 点击音量条修改音量
