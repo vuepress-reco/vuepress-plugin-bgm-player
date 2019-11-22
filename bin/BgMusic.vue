@@ -33,7 +33,7 @@
           <i v-show="curPlayStatus === 'playing'" @click="pauseBgm" class="reco-bgm reco-bgm-pause pause"></i>
           <i v-show="curPlayStatus === 'paused'" ref="play" @click="playBgm" class="reco-bgm reco-bgm-play play"></i>
           <i class="reco-bgm reco-bgm-next next" @click="playNext"></i>
-          <i v-show="!isMute" @click="muteBgm" class="reco-bgm reco-bgm-volume volume"></i>
+          <i v-show="!isMute" @click="muteBgm" class="reco-bgm reco-bgm-volume1 volume"></i>
           <i v-show="isMute" @click="unMuteBgm" class="reco-bgm reco-bgm-mute mute"></i>
           <div class="volume-bar" @click="volumeJump">
             <div class="bar" ref="vbar"></div>
@@ -299,9 +299,9 @@ export default {
         .next
           font-size 14px
         .pause
-          font-size 14px
+          font-size 15px
         .play
-          font-size 14px
+          font-size 15px
         .volume
           font-size 18px
         .mute
