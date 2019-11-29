@@ -22,12 +22,15 @@
 |-|-|-|-|-|
 |audios|播放列表|Array|无|-|
 |position|播放器位置|Object|{ left: '10px', bottom: '10px', 'z-index': '999999'}|-|
-|mini|是否默认为迷你模式|Boolean|false|true/false|
+|shrinkMode|指定PC端缩小为哪种模式|String|'mini'|'mini'/'float'|
+|floatPosition|指定浮窗模式浮动在哪一侧|String|'left'|'left'/'right'|
+|floatStyle|浮窗的样式|Object|{ bottom: '100px', 'z-index': '999999' }|-|
 
 
 ### audios示例
 
 - audios为播放列表的对象数组
+- 无默认值必须配置
 - 示例
   ```
   audios: [
@@ -53,14 +56,16 @@
     }
   ]  
   ```
+### shrinkMode说明
+
+- PC端可以通过shrinkMode来指定缩小时缩为哪种模式
+- 移动端默认缩小为浮窗模式
 
 ## About
 
 - **兼容性**：vuepress-plugin-bgm-player是使用HTML5的Audio开发，故兼容性与Audio的兼容性相关
+- 对于 `vuepress-theme-reco` 的 `dark` 模式的适配  
+  ![dark.png](./images/dark.png)
 - **开发计划**
   - 自动播放
-  - 切歌时的加载动画
-  - 增加浮窗模式
-  - 增加音量记忆
-  - 增加进度条记忆
   - 移动端适配问题修复
