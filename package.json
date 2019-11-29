@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-plugin-bgm-player",
+  "name": "@vuepress-reco/vuepress-plugin-bgm-player",
   "version": "1.0.1",
   "description": "bgm player plugin for vuepress themes",
   "main": "index.js",
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/vuepress-reco/vuepress-plugin-bgm-player/issues"
   },
-  "homepage": "https://github.com/vuepress-reco/vuepress-plugin-bgm-player#readme",
+  "homepage": "https://vuepress-theme-reco.recoluan.com",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0",
