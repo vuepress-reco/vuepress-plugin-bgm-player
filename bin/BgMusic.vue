@@ -175,6 +175,9 @@ export default {
       const playPromise = this.$refs.bgm.play()
       if (playPromise !== undefined) {
         playPromise.then(res => {
+          if (this.isFault) {
+            this.isFault = false
+          }
         // eslint-disable-next-line handle-callback-err
         }).catch(err => {
           // 播放异常时显示播放失败并暂停播放

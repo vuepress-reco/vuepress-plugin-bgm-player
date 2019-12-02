@@ -4,7 +4,7 @@
 
 ## Details
 
-> Bgm player for vuepress-theme-reco or other vuepress theme.  
+> Bgm player plugin for vuepress-theme-reco or other vuepress theme.  
 > Vuepress 音乐播放器插件
 
 |使用位置|值|
@@ -69,3 +69,4 @@
 - **开发计划**
   - 自动播放
   - 移动端适配问题修复
+  - 切换动画
