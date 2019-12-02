@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/vuepress-reco/vuepress-plugin-bgm-player/issues"
   },
-  "homepage": "https://vuepress-theme-reco.recoluan.com",
+  "homepage": "https://vuepress-theme-reco.recoluan.com/en/views/plugins/bgmPlayer.html",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.4.0",
