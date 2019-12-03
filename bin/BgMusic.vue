@@ -252,7 +252,8 @@ export default {
 <style lang="stylus" scoped>
 @require './assets/iconfont/iconfont.css'
 .reco-bgm-panel
-  height 100px
+  height 0
+  width 0
   .reco-bgm-box
     position fixed
     display flex
