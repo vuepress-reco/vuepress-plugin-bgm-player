@@ -2,12 +2,12 @@
   <div class="reco-bgm-panel">
     <!-- 播放器 -->
     <audio id="bgm" :src="audio[curIndex].url" ref="bgm" @ended="bgmEnded" @canplay="playReady" @timeupdate="timeUpdate"></audio>
-    <div v-show="isFloat" @click="showBgmInfo" class="reco-float-box" :style="floatStyle">
+    <div v-show="isFloat" @click="changeBgmInfo(false)" class="reco-float-box" :style="floatStyle">
       <img :src="audio[curIndex].cover">
     </div>
     <div class="reco-bgm-box" v-show="!isFloat" :style="panelPosition">
       <!-- 封面 -->
-      <div class="reco-bgm-cover" @click="showBgmInfo" :style="`background-image:url(${audio[curIndex].cover})`">
+      <div class="reco-bgm-cover" @click="changeBgmInfo(false)" :style="`background-image:url(${audio[curIndex].cover})`">
         <!-- mini操作栏 -->
         <div v-show="isMini" class="mini-operation">
           <i v-show="this.curPlayStatus === 'playing' && isMini" @click.stop="pauseBgm" class="reco-bgm reco-bgm-pause"></i>
@@ -44,7 +44,7 @@
         </div>
       </div>
       <!-- 缩放按钮 -->
-      <div v-show="!isMini" @click="hideBgmInfo" class="reco-bgm-left-box">
+      <div v-show="!isMini" @click="changeBgmInfo(true)" class="reco-bgm-left-box">
         <i class="reco-bgm reco-bgm-left" ></i>
       </div>
     </div>
@@ -114,27 +114,15 @@ export default {
     }
   },
   methods: {
-    // 隐藏Bgm信息
-    hideBgmInfo () {
+    // 显示或隐藏歌曲信息
+    changeBgmInfo (bool) {
       const isMobile = !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       )
-      if (isMobile) {
-        this.isFloat = true
-      } else {
-        if (this.shrinkMode === 'float') {
-          this.isFloat = true
-        } else if (this.shrinkMode === 'mini') {
-          this.isMini = true
-        }
-      }
-    },
-    // 显示Bgm信息
-    showBgmInfo () {
-      if (this.shrinkMode === 'float') {
-        this.isFloat = false
-      } else if (this.shrinkMode === 'mini') {
-        this.isMini = false
+      if (isMobile || this.shrinkMode === 'float') {
+        this.isFloat = bool
+      } else if (!isMobile && this.shrinkMode === 'mini') {
+        this.isMini = bool
       }
     },
     // audio canplay回调事件
