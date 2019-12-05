@@ -1,6 +1,6 @@
 {
   "name": "@vuepress-reco/vuepress-plugin-bgm-player",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "bgm player plugin for vuepress themes",
   "main": "index.js",
   "scripts": {

@@ -1,5 +1,5 @@
 export default {
-  data () {
+  data() {
     return {
       volumeKey: 'reco-bgm-volume'
     }
@@ -12,7 +12,7 @@ export default {
       return sessionStorage.getItem(this.volumeKey)
     },
     removeVolume () {
-      sessionStorage.removeItem(this.volumeKey)
+      sessionStorage.removeItem(this.volumeKey);
     }
   }
 }

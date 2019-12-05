@@ -60,6 +60,7 @@ function rotate () {
   InterVal = setInterval(function () {
     const cover = document.querySelector('.reco-bgm-cover')
     const btn = document.querySelector('.mini-operation')
+    const fm = document.querySelector('.falut-message')
     rotateVal += 1
     // 设置旋转属性(顺时针)
     cover.style.transform = 'rotate(' + rotateVal + 'deg)'
@@ -69,11 +70,15 @@ function rotate () {
     btn.style.transform = 'rotate(-' + rotateVal + 'deg)'
     // 设置旋转时的动画  匀速0.1s
     btn.style.transition = '0.1s linear'
+    // 设置旋转属性(逆时针)
+    fm.style.transform = 'rotate(-' + rotateVal + 'deg)'
+    // 设置旋转时的动画  匀速0.1s
+    fm.style.transition = '0.1s linear'
   }, 100)
 }
-import remember from './remember.js'
+import volume from './mixins/volume.js'
 export default {
-  mixins: [remember],
+  mixins: [volume],
   mounted () {
     if (this.floatPosition === 'left') {
       this.floatStyle = {
@@ -251,144 +256,5 @@ export default {
 
 <style lang="stylus" scoped>
 @require './assets/iconfont/iconfont.css'
-.reco-bgm-panel
-  height 0
-  width 0
-  .reco-bgm-box
-    position fixed
-    display flex
-    height 80px
-    background-color rgba(255, 255, 255, 0.7)
-    background-color var(--bgm-bg-color)
-    border-radius 50px
-    padding 10px
-    box-shadow 0 1px 6px 0 rgba(0,0,0,0.2)
-    .reco-bgm-cover
-      background-size contain
-      float left
-      height 80px
-      width 80px
-      border-radius 40px
-      box-shadow 0 0 10px 1px #616161
-      .mini-operation
-        height 80px
-        border-radius 40px
-        width 80px
-        display flex
-        background-color rgba(158, 158, 158, 0.3)
-        justify-content center
-        align-items center
-        i
-          color #fff
-          cursor pointer
-          font-size 20px
-      .falut-message
-        height 80px
-        border-radius 40px
-        width 80px
-        display flex
-        background-color rgba(158, 158, 158, 0.3)
-        justify-content center
-        align-items center
-        color #ffffff
-    .reco-bgm-info
-      float left
-      height 80px
-      padding 0 10px
-      display flex
-      flex-direction column
-      justify-content center
-      .info-box
-        height 21px
-        display flex
-        align-items center
-        i
-          color $accentColor
-          font-size 21px
-        .music
-          font-size 18px
-      .reco-bgm-progress
-        height 14px
-        width 150px
-        display flex
-        align-items center
-        .progress-bar
-          height 5px
-          width 150px
-          background #757575
-          border-radius 5px
-          position relative
-          cursor pointer
-          .bar
-            position absolute
-            left 0
-            top 0
-            height 5px
-            width 0
-            background-color $accentColor
-            border-radius 5px
-      .reco-bgm-operation
-        display flex
-        justify-content flex-start
-        align-items center
-        height 24px
-        i
-          margin-right 5px
-          color $accentColor
-          cursor pointer
-        .last
-          font-size 14px
-        .next
-          font-size 14px
-        .pause
-          font-size 15px
-        .play
-          font-size 15px
-        .volume
-          font-size 18px
-        .mute
-          font-size 18px
-        .volume-bar
-          height 5px
-          width 57px
-          background #757575
-          border-radius 5px
-          position relative
-          cursor pointer
-          .bar
-            position absolute
-            left 0
-            top 0
-            height 5px
-            width 0
-            background-color $accentColor
-            border-radius 5px
-    .reco-bgm-left-box
-      float left
-      height 80px
-      font-size 22px
-      display flex
-      flex-direction column
-      justify-content center
-      cursor pointer
-      i
-        color $accentColor
-  .reco-float-box
-    width 40px
-    height 40px
-    background-color $accentColor
-    position fixed
-    left 0
-    bottom 200px
-    border-top-right-radius 20px
-    border-bottom-right-radius 20px
-    display flex
-    justify-content center
-    align-items center
-    cursor pointer
-    box-shadow var(--box-shadow)
-    img
-      width 30px
-      height 30px
-      border-radius 50%
+@import './styles/index.styl'
 </style>
