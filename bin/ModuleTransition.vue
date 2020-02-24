@@ -19,12 +19,18 @@ export default {
     duration: {
       type: String,
       default: '.25'
+    },
+    position: {
+      type: String,
+      default: 'left'
     }
   },
   methods: {
     setStyle (items) {
       items.style.transition = `all ${this.duration}s ease-in-out ${this.delay}s`
-      items.style.transform = 'translateX(-20px)'
+      items.style.transform = this.position === 'right'
+                            ? 'translateX(20px)'
+                            : 'translateX(-20px)'
       items.style.opacity = 0
     },
     unsetStyle (items) {

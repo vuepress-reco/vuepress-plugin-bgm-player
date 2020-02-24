@@ -11,10 +11,10 @@ module.exports = (options, context) => ({
       },
       AUDIOS: audios,
       AUTOPLAY: autoplay || true, // 是否开启自动播放
-      SHRINK_MODE: shrinkMode || 'mini',
+      SHRINK_MODE: shrinkMode || 'float',
       FLOAT_POSITION: floatPosition || 'left',
       FLOAT_STYLE: floatStyle || {
-        bottom: '100px',
+        bottom: '200px',
         'z-index': '999999'
       }
     }

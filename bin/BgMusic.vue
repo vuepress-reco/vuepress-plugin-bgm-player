@@ -2,7 +2,7 @@
   <div class="reco-bgm-panel">
     <!-- 播放器 -->
     <audio id="bgm" :src="audio[curIndex].url" ref="bgm" @ended="bgmEnded" @canplay="playReady" @timeupdate="timeUpdate"></audio>
-    <module-transition>
+    <module-transition :position="floatPosition">
       <div v-show="isFloat" @click="changeBgmInfo(false)" class="reco-float-box" :style="floatStyle">
         <img :src="audio[curIndex].cover">
       </div>
@@ -95,12 +95,16 @@ export default {
     if (this.floatPosition === 'left') {
       this.floatStyle = {
         ...this.floatStyle,
-        left: '0'
+        'left': '0',
+        'border-top-right-radius': '20px',
+        'border-bottom-right-radius': '20px'
       }
     } else {
       this.floatStyle = {
         ...this.floatStyle,
-        right: '0'
+        'right': '0',
+        'border-top-left-radius': '20px',
+        'border-bottom-left-radius': '20px'
       }
     }
   },

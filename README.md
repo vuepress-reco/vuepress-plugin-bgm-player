@@ -22,9 +22,9 @@
 |-|-|-|-|-|
 |audios|播放列表|Array|无|-|
 |position|播放器位置|Object|{ left: '10px', bottom: '10px', 'z-index': '999999'}|-|
-|shrinkMode|指定PC端缩小为哪种模式|String|'mini'|'mini'/'float'|
+|shrinkMode|指定PC端缩小为哪种模式|String|'float'|'mini'/'float'|
 |floatPosition|指定浮窗模式浮动在哪一侧|String|'left'|'left'/'right'|
-|floatStyle|浮窗的样式|Object|{ bottom: '100px', 'z-index': '999999' }|-|
+|floatStyle|浮窗的样式|Object|{ bottom: '200px', 'z-index': '999999' }|-|
 
 
 ### audios示例
@@ -69,4 +69,3 @@
 - **开发计划**
   - 自动播放
   - 移动端适配问题修复
-  - 切换动画
