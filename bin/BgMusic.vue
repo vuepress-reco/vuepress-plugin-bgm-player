@@ -107,6 +107,8 @@ export default {
         'border-bottom-left-radius': '20px'
       }
     }
+    // autoShrink时隐藏歌曲信息
+    if (this.autoShrink) this.changeBgmInfo(true)
   },
   data () {
     return {
@@ -122,6 +124,7 @@ export default {
       isFault: false,
       floatPosition: FLOAT_POSITION,
       floatStyle: FLOAT_STYLE,
+      autoShrink: AUTO_SHRINK,
       shrinkMode: SHRINK_MODE
     }
   },

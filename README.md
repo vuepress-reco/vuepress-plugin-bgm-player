@@ -22,6 +22,7 @@
 |-|-|-|-|-|
 |audios|播放列表|Array|无|-|
 |position|播放器位置|Object|{ left: '10px', bottom: '10px', 'z-index': '999999'}|-|
+|autoShrink|是否自动缩小|Boolean|false|true/false|
 |shrinkMode|指定PC端缩小为哪种模式|String|'float'|'mini'/'float'|
 |floatPosition|指定浮窗模式浮动在哪一侧|String|'left'|'left'/'right'|
 |floatStyle|浮窗的样式|Object|{ bottom: '200px', 'z-index': '999999' }|-|

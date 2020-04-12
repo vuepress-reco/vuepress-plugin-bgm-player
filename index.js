@@ -2,7 +2,7 @@ const { resolve } = require('path')
 
 module.exports = (options, context) => ({
   define () {
-    const { position, audios, autoplay, shrinkMode, floatPosition, floatStyle } = options
+    const { position, audios, autoplay, autoShrink, shrinkMode, floatPosition, floatStyle } = options
     return {
       POSITION: position || {
         left: '10px',
@@ -11,6 +11,7 @@ module.exports = (options, context) => ({
       },
       AUDIOS: audios,
       AUTOPLAY: autoplay || true, // 是否开启自动播放
+      AUTO_SHRINK: autoShrink || false, // 是否默认收缩
       SHRINK_MODE: shrinkMode || 'float',
       FLOAT_POSITION: floatPosition || 'left',
       FLOAT_STYLE: floatStyle || {
