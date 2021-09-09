@@ -22,6 +22,7 @@
 |-|-|-|-|-|
 |audios|播放列表|Array|无|-|
 |position|播放器位置|Object|{ left: '10px', bottom: '10px', 'z-index': '999999'}|-|
+|autoplay|是否自动播放|Boolean|false|true/false|
 |autoShrink|是否自动缩小|Boolean|false|true/false|
 |shrinkMode|指定PC端缩小为哪种模式|String|'float'|'mini'/'float'|
 |floatPosition|指定浮窗模式浮动在哪一侧|String|'left'|'left'/'right'|
@@ -59,7 +60,7 @@
   ```
 ### shrinkMode说明
 
-- PC端可以通过shrinkMode来指定缩小时缩为哪种模式
+- PC端可以通过shrinkMode来指定正常模式缩小时缩小为哪种模式
 - 移动端默认缩小为浮窗模式
 
 ## About
@@ -68,5 +69,4 @@
 - 对于 `vuepress-theme-reco` 的 `dark` 模式的适配  
   ![dark.png](./images/dark.png)
 - **开发计划**
-  - 自动播放
   - 移动端适配问题修复
